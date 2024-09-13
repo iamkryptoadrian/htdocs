@@ -1,0 +1,121 @@
+#main_image-preview {
+    width: 40%;
+    height: auto;
+}
+
+@media screen and (max-width:765px) {
+    #main_image-preview {
+        width: 100%;
+    }
+
+}
+
+.other_img-container {
+    position: relative;
+}
+
+.mt-01 {
+    margin-top: 1px !important;
+}
+.mt-02 {
+    margin-top: 2px !important;
+}
+.mt-03 {
+    margin-top: 3px !important;
+}
+.mt-04 {
+    margin-top: 4px !important;
+}
+.mt-05 {
+    margin-top: 5px !important;
+}
+.mt-06 {
+    margin-top: 6px !important;
+}
+
+.text-pending_payment {
+    color: #f5aa51;
+}
+
+.text-confirmed {
+    color: #15b112;
+}
+
+.text-cancelled {
+    color: #ff5555;
+}
+
+.text-completed {
+    color: #37bb00;
+}
+
+.text-active {
+    color: #7075ff;
+}
+
+
+.scrollable_table {
+    overflow-x: auto;
+    white-space: nowrap;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.status-pending {
+    color: #f5aa51; /* Orange for pending */
+}
+
+.status-failed {
+    color: #ff5555; /* Red for failed */
+}
+
+.status-paid {
+    color: #37bb00; /* Green for paid */
+}
+
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+    .printable, .printable * {
+      visibility: visible;
+    }
+
+    .printable {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .header, .footer, .nav, .hide-on-print {
+        display: none !important;
+    }
+    .hide-on-print {
+        display: none;
+    }
+
+    .invoice-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start; /* Align items to the start of the flex container */
+    }
+
+    .invoice-contact, .invoice-desc {
+        flex: 1; /* This makes both children of .invoice-head take equal width */
+        /* Removed the fixed width and adjusted margin. If you want them to not take the full width, you can specify a width here. */
+    }
+
+    .invoice-desc {
+        /* If the desc is too high, you can adjust the margin-top accordingly */
+        margin-top: 0; /* Adjust this value if needed to align properly */
+        padding-top: 0; /* Remove any additional padding that may offset the layout */
+    }   
+}
+
+.make_it_bold {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    font-weight: 500;
+}

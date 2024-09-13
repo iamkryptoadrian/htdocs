@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    # Enable the RewriteEngine
+    RewriteEngine On
+
+    # If the request is for the /icons/ directory, serve from the project's icons folder
+    RewriteCond %{REQUEST_URI} ^/icons/
+    RewriteCond %{DOCUMENT_ROOT}/icons/$1 -f
+    RewriteRule ^icons/(.*)$ icons/$1 [L]
+
+    # Redirect all other requests to the /public folder
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
